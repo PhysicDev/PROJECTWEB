@@ -1,6 +1,7 @@
+<!--header avec menu de navigation-->
 <div id="container">
 <div id="header">
-<h1>Welcome to the main page</h1>
+<h1>Super projet PEIP2</h1>
 </div>
 <div id="nav">
 <ul>

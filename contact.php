@@ -1,4 +1,4 @@
-<!-- basic HTML page -->
+<!-- page inutile pour meubler -->
 <!DOCTYPE html>
 <html>
 <head>
