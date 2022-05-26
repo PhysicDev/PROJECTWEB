@@ -12,7 +12,7 @@
 <div>
 <h2>Connexion :</h2>
 <form id="login" action="index.php?connected='ok'" method="post" onsubmit="return checkform()" onreset="resetform()">
-    <input type="text" name="login" placeholder="login" required ></input>
+    <input type="text" name="login" placeholder="pseudo" required ></input>
     <input type="password" name="password" placeholder="password" required></input>
     <input type="password" name="password2" placeholder="confirm password" required></input>
     <input type="submit" value="submit"></input>
