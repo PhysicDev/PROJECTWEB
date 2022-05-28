@@ -1,5 +1,3 @@
-var users = [];
-
 function checkform(){
     var pseudo = document.getElementById("pseudo").value;
     var password = document.getElementById("password").value;
@@ -68,12 +66,13 @@ function errorMsg(xmlhttp){
 }
 
 function addErrors(array){
-    document.getElementById("error").innerHTML ="<ul>"+(array.length-1)+" erreur ont été détectées:<br>";
+    document.getElementById("error").innerHTML ="<p><ul>"+(array.length-1)+" erreur ont été détectées:<br>";
     for(let i=1 ;i< array.length;i++){
         document.getElementById("error").innerHTML += "<li>"+array[i]+"</li>";
     }
-    document.getElementById("error").innerHTML +="</ul>";
+    document.getElementById("error").innerHTML +="</ul></p>";
     document.getElementById("error").style.visibility = "visible";
+    document.getElementById("error").style.display = "block";
 }
 
 
@@ -90,5 +89,6 @@ window.onload = function(){
     //on cache la div si on clique dessus
     document.getElementById("error").onclick = function(){
         document.getElementById("error").style.visibility = "hidden";
+        document.getElementById("error").style.display = "none";
     }
 }

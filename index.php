@@ -1,4 +1,7 @@
 <!-- basic HTML page -->
+<?php 
+include("php/sessionManager.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +13,7 @@
 <?php
     include 'header.php';
 ?>
-<div>
+<div id="main">
 <h2>This is the main page</h2>
 <p>
 This is the main page of the website.</br>

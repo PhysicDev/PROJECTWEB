@@ -1,4 +1,7 @@
 <!-- page inutile pour meubler -->
+<?php 
+include("php/sessionManager.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +13,10 @@
 <?php
     include 'header.php';
 ?>
-<div>
+<div id="main">
 <h2>Contact</h2>
-<p>
-<ul> you can contact me :
+<p> you can contact me :
+<ul>
 <li> by email : vincent.etud@gmail.com</li>
 <li> by phone : </em>insert fake phone number here to look professional</em></li>
 </li>

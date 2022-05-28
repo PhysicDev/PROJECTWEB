@@ -1,4 +1,7 @@
 <!-- page inutile pour meubler -->
+<?php 
+include("php/sessionManager.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +13,7 @@
 <?php
     include 'header.php';
 ?>
-<div>
+<div id="main">
 <h2>what is this website ?</h2>
 <p>
 This is a website made for the PEIP2 web development course.
