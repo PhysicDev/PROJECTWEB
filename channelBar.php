@@ -13,6 +13,11 @@
             //on lit le fichier csv pour afficher la liste des salons de discussion
             $nbSalons = 0;
             echo("il y a $nbSalons salon de discution");
+
+            //
+             //   exemple d'element de liste : 
+             //   <li><a href="channel.php?name= le nom du chanel"> nomDuChannel :: Admin : nomDuCreateur</a></li>
+            //
         ?>
     </ul>
 </div>
