@@ -1,4 +1,4 @@
-<!-- page inutile pour meubler -->
+<!-- page inutile pour meubler encore -->
 <?php 
 include("php/sessionManager.php");
 ?>
