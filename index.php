@@ -14,6 +14,10 @@ include("php/sessionManager.php");
     include 'header.php';
 ?>
 <div id="main">
+    <?php
+        include 'channelBar.php';
+    ?>
+<div id="content">
 <h2>This is the main page</h2>
 <p>
 This is the main page of the website.</br>
@@ -22,5 +26,6 @@ this project is insane and will change the way you see the world !!!
 <br>
 but for now there are only horrible and empty web page without any css design ... :)
 </p>
+</div>
 </div>
 </body>

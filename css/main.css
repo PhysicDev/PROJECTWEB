@@ -14,17 +14,24 @@ body{
 
 div{
     margin: 0 auto;
-    width: 80%;
     padding: 10px;
+    width: 90%;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #ccc;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px #ccc;
+}
+
+a{
+    text-decoration: none;
 }
 
 p{
     margin: 0;
     padding: 0;
+    text-align: justify;
 }
+
 
 #nav ul{
   display: flex;
@@ -32,6 +39,17 @@ p{
   justify-content: center;
   justify-content: space-between;
   list-style-type: none;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+  text-align: center;
 }
 
 .form{
@@ -104,4 +122,28 @@ input[type=reset] {
 input[type=reset]:hover {
   background-color: #f76f72;
   transition: all .35s ease-Out;
+}
+
+#main{
+  display: flex;
+  flex-direction: row;
+  padding:0px;
+  width:calc(90% + 20px);
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border:unset;
+  min-height: 400px;
+}
+
+#content{
+  flex:1;
+  min-height: 400px;
+
+}
+
+#Lbar{
+  width:300px;
+  min-height: 400px;
+  margin-right: 50px;
 }

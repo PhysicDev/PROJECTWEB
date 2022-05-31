@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <div id="main">
+    <div id="content">
         <h2>Inscription :</h2>
         <div class="form" id="signIn">
             <input id="pseudo" type="text" name="pseudo" placeholder="pseudo"></input>

@@ -1,20 +1,23 @@
-<!--formulaire de connexion-->
+<!--formulaire d'ajout des channels-->
+<?php 
+$noAllow = true;
+include("php/sessionManager.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
+<title>AddChannel</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <script type="text/javascript" src="JS/simpleAjax.js"></script>
-<script type="text/javascript" src="JS/login.js"></script>
+<script type="text/javascript" src="JS/channel.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
 <body>
 <?php include 'header.php';?>
 <div id="content">
-    <h2>Connexion :</h2>
-    <div class="form" id="login">
-        <input id="pseudo" type="text" name="login" placeholder="pseudo"></input>
-        <input id="password" type="password" name="password" placeholder="password"></input>
+    <h2>Nouveau canal :</h2>
+    <div class="form" id="channel">
+        <input id="name" type="text" name="channel" placeholder="nom du canal"></input>
         <input class="button" type="submit" value="submit" onclick="checkform()"></input>
     </div>
     <div id="error" style="visibility:hidden"></div>

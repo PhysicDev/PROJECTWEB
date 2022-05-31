@@ -5,7 +5,7 @@ include("php/sessionManager.php");
 <!DOCTYPE html>
 <html>
 <head>
-<title>Main Page</title>
+<title>Contact</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
@@ -14,6 +14,10 @@ include("php/sessionManager.php");
     include 'header.php';
 ?>
 <div id="main">
+    <?php
+        include 'channelBar.php';
+    ?>
+<div id="content">
 <h2>Contact</h2>
 <p> you can contact me :
 <ul>
@@ -22,5 +26,6 @@ include("php/sessionManager.php");
 </li>
 </ul>
 </p>
+</div>
 </div>
 </body>
