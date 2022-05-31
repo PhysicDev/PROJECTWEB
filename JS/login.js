@@ -10,6 +10,7 @@ function checkform(){
            if(document.getElementById("login").children[i].value==""){
                 ok=false;
                 document.getElementById("error").innerHTML += "le champ "+document.getElementById("login").children[i].placeholder+" est vide</br>";
+                errorDiv(document.getElementById("login").children[i]);
             }
         }
     }
@@ -21,6 +22,10 @@ function checkform(){
         document.getElementById("error").style.visibility = "visible";
         document.getElementById("error").style.display = "block";
     }
+}
+
+function errorDiv(element){
+    element.style.borderColor = "red";
 }
 
 function next(xmlhttp){
@@ -40,5 +45,10 @@ window.onload = function(){
     document.getElementById("error").onclick = function(){
         document.getElementById("error").style.visibility = "hidden";
         document.getElementById("error").style.display = "none";
+        for(let i=0;i<document.getElementById("login").children.length;i++){
+            if(document.getElementById("login").children[i].type=="text"||document.getElementById("login").children[i].type=="password" ){
+                document.getElementById("login").children[i].style.borderColor = "unset";
+            }
+        }
     }
 }

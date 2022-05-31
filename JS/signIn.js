@@ -12,6 +12,7 @@ function checkform(){
            if(document.getElementById("signIn").children[i].value==""){
                ok = false;
                errors.push("le champ "+document.getElementById("signIn").children[i].placeholder+" est vide");
+               errorDiv(document.getElementById("signIn").children[i]);
            }
         }
     }
@@ -19,33 +20,40 @@ function checkform(){
         if(pseudo.length<5){
             ok=false;
             errors.push("Le pseudo doit contenir au moins 5 caractères");
+            errorDiv(document.getElementById("pseudo"));
         }
 
         //check if pseudo contain only letters and number
         if(!pseudo.match(/^[a-zA-Z0-9]+$/)){
             ok=false;
             errors.push("Le pseudo ne doit contenir que des lettres et des chiffres");
+            errorDiv(document.getElementById("pseudo"));
         }
 
         //check if password contain at least one number
         if(!password.match(/[0-9]/)){
             ok=false;
             errors.push("Le mot de passe doit contenir au moins un chiffre");
+            errorDiv(document.getElementById("password"));
         }
 
         if(!password.match(/[a-zA-Z]/)){
             ok=false;
             errors.push("Le mot de passe doit contenir au moins une lettre");
+            errorDiv(document.getElementById("password"));
         }
 
         if(password.length<8){
             ok=false;
             errors.push("Le mot de passe doit contenir au moins 8 caractères");
+            errorDiv(document.getElementById("password"));
         }
 
         if(password!=password2){
             ok=false;
             errors.push("Les mots de passe ne correspondent pas");
+            errorDiv(document.getElementById("password"));
+            errorDiv(document.getElementById("password2"));
         }        
     }
 
@@ -54,6 +62,10 @@ function checkform(){
     }else{
         addErrors(errors);
     }
+}
+
+function errorDiv(element){
+    element.style.borderColor = "red";
 }
 
 function errorMsg(xmlhttp){
@@ -81,6 +93,7 @@ function resetform(){
     for(let i=0;i<document.getElementById("signIn").children.length;i++){
         if(document.getElementById("signIn").children[i].type=="text"||document.getElementById("signIn").children[i].type=="password" ){
             document.getElementById("signIn").children[i].value = "";
+            document.getElementById("signIn").children[i].style.borderColor = "unset";
         }
     }
 }
@@ -90,5 +103,10 @@ window.onload = function(){
     document.getElementById("error").onclick = function(){
         document.getElementById("error").style.visibility = "hidden";
         document.getElementById("error").style.display = "none";
+        for(let i=0;i<document.getElementById("signIn").children.length;i++){
+            if(document.getElementById("signIn").children[i].type=="text"||document.getElementById("signIn").children[i].type=="password" ){
+                document.getElementById("signIn").children[i].style.borderColor = "unset";
+            }
+        }
     }
 }
