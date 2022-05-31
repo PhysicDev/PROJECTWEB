@@ -20,24 +20,27 @@ function checkform(){
     }
     
 
-    if(name.length<3){
+    if(name.length<5){
         ok=false;
-        document.getElementById("error").innerHTML += "le nom doit faire plus de 3 caractères</br>";
+        errors.push('le nom doit faire plus de 5 caractères');
     }
 
     //verifie si le nom du channel contient au moins une lettre
     if(!name.match(/[a-zA-Z]/)){
         ok=false;
-        document.getElementById("error").innerHTML += "le nom doit contenir au moins une lettre</br>";
+        errors.push('le nom doit contenir au moins une lettre');
     }
 
-    //verifie que le nom ne contient pas de caractere speciaux
+    //verifie que le nom ne contient que des chiffres et des lettres
+    if(!name.match(/^[a-zA-Z0-9]+$/)){
+        ok=false;
+        errors.push('le nom ne doit contenir que des chiffres et des lettres');
+    }
 
     if(ok){
         new simpleAjax("php/channelFormValid.php","post","name="+name,errorMsg);
     }else{
-        document.getElementById("error").style.visibility = "visible";
-        document.getElementById("error").style.display = "block";
+        addErrors(errors);
     }
 }
 
@@ -45,7 +48,7 @@ function checkform(){
 function errorMsg(xmlhttp){
     let jsonDat = JSON.parse(xmlhttp.responseText);
     if(jsonDat["valid"]){
-        window.location.href = "PopUp.php";
+        window.location.href = "PopUp.php?type=channel";
     }else{
         addErrors(jsonDat["error"]);
     }

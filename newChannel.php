@@ -15,9 +15,9 @@ include("php/sessionManager.php");
 <body>
 <?php include 'header.php';?>
 <div id="content">
-    <h2>Nouveau canal :</h2>
+    <h2>Créer un nouveau canal :</h2>
     <div class="form" id="channel">
-        <input id="name" type="text" name="channel" placeholder="nom du canal"></input>
+        <input id="name" type="text" name="name" placeholder="nom du canal"></input>
         <input class="button" type="submit" value="submit" onclick="checkform()"></input>
     </div>
     <div id="error" style="visibility:hidden"></div>
