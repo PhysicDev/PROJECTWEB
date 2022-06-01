@@ -8,7 +8,6 @@ $users = readUsers();
 
 $password=hash("sha512",$password);
 if(isset($users[$user]) && $users[$user]==$password){
-    session_unset();
     session_reset();
     session_start();
     $_SESSION['user']=$user;

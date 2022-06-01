@@ -1,5 +1,6 @@
 <?php 
 
+error_reporting(E_ERROR | E_PARSE);
 function readUsers(){
         $file = fopen("../data/users.csv", "r");
         $users = array();
