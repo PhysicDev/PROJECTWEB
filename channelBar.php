@@ -4,7 +4,7 @@
 
     si l'utilisateur est connecté, il peut créer un salon de discussion à l'aide d'un bouton qui sera affiché dans le haut de la div
 -->
-<div id="Lbar">
+<div id="Lbar" class="bar">
     <?php
         //si l'utilisateur est connecté on affiche le bouton pour créer un salon de discussion
 
@@ -14,7 +14,6 @@
             //echo '<button class="button" onclick="showChannel()">Créer un salon de discussion</button>';
         }
     ?>
-    <ul id="channelList">
         <?php
             //on lit le fichier csv pour afficher la liste des salons de discussion
             $nbSalons = 0;
@@ -26,13 +25,13 @@
 
             $lesChannels = file("data/channel.csv");
             $nbSalons = count($lesChannels);
-            echo("il y a $nbSalons salon de discution" . "<br>" . "<br>");
+            echo("<p style='margin-left:10px;margin-top:20px'>il y a $nbSalons salons de discution" . "</p>" . "<ul id='channelList'>");
             foreach ($lesChannels as $channel) {
                 $channel = explode("|", $channel);
                 $nameChannel = $channel[0];
                 $admin = $channel[1];
                 //$nbSalons++;
-                echo("<li><a href='channel.php?name=$nameChannel'>$nameChannel | Admin : $admin</a></li>");
+                echo("<li>$nameChannel | Admin : $admin</li>");
             }
            
            

@@ -132,15 +132,10 @@ input[type=reset]:hover {
   flex-direction: row;
   padding:0px;
   width:calc(90% + 20px);
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   overflow: hidden;
   border:unset;
-  min-height: 400px;
-}
-
-#content{
-  flex:1;
   min-height: 400px;
 }
 
@@ -156,6 +151,7 @@ input[type=reset]:hover {
   padding: 0px;
   display: flex;
   width:50px;
+  margin-top: 25px;
   flex-direction: row;
   align-items: center;
   border-radius: 40px;
@@ -164,7 +160,7 @@ input[type=reset]:hover {
 }
 
 #channel:hover{
-  width:300px;
+  width:90%;
 }
 
 #channel input{
@@ -176,15 +172,36 @@ input[type=reset]:hover {
   transition: all .35s ease-Out;
 }
 
-#Lbar #error{
+.bar #error{
   padding: 5px;
   margin-top: 5px;
   width: 75%;
+  font-size: 12px;
 }
 
 #channel:hover input{
   display: block;
 }
+
+.bar {
+  padding:3px;
+}
+
+.bar ul{
+  max-height: 500px;
+  overflow: auto;
+}
+
+.bar li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
 
 #Lbar{
   width:300px;
