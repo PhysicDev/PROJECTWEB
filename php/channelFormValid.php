@@ -48,6 +48,6 @@
 
 
     $php_errormsg .= "]";
-    echo('{"valid":'.($ok?"true":"false").',"error":'.$php_errormsg.'}');
+    echo('{"valid":'.($ok?"true":"false").',"error":'.$php_errormsg.',"user":"'.$user.'"}');
     }
 ?>

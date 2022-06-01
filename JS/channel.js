@@ -1,3 +1,4 @@
+var newChan="";
 function checkform(){
 
     let ok = true;
@@ -38,6 +39,7 @@ function checkform(){
     }
 
     if(ok){
+        newChan = name;
         new simpleAjax("php/channelFormValid.php","post","name="+name,errorMsg);
     }else{
         addErrors(errors);
@@ -48,7 +50,8 @@ function checkform(){
 function errorMsg(xmlhttp){
     let jsonDat = JSON.parse(xmlhttp.responseText);
     if(jsonDat["valid"]){
-        window.location.href = "PopUp.php?type=channel";
+        document.getElementById("channelList").innerHTML+="<li><a href='channel.php?name="+newChan+"'>"+newChan+"| Admin : "+jsonDat["user"]+"</a></li>";
+        document.getElementById("name").value = "";
     }else{
         addErrors(jsonDat["error"]);
     }

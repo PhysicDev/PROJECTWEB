@@ -14,7 +14,7 @@
             //echo '<button class="button" onclick="showChannel()">Créer un salon de discussion</button>';
         }
     ?>
-    <ul>
+    <ul id="channelList">
         <?php
             //on lit le fichier csv pour afficher la liste des salons de discussion
             $nbSalons = 0;
