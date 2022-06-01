@@ -205,6 +205,9 @@ input[type=reset]:hover {
 
 .bar ul{
   max-height: 500px;
+  margin-left: 0px;
+  padding:0px;
+  margin-bottom: 0px;
   overflow: auto;
 }
 
@@ -233,4 +236,12 @@ input[type=reset]:hover {
   width:400px;
   min-height: 400px;
   margin-left: 30px;
+}
+
+.odd{
+  background-color: #f0f2ff;
+}
+
+.even{
+  background-color: #ffffff;
 }
