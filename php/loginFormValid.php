@@ -1,5 +1,7 @@
 <?php
-
+if(!isset($_POST['password']) || !isset($_POST['pseudo'])){
+    http_response_code(400);
+}
 $password = $_POST['password'];
 $user= $_POST["pseudo"];
 

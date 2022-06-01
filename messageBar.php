@@ -19,11 +19,9 @@
             }     
             
             echo("</ul>");
-
         }
-    else {
-        
-        echo("<div id="."\"messages\""." style=\"display:none\">");
+    else {        
+        echo("<div id="."\"Rbar\""." style=\"display:none\">");
     }
 
     echo("</div>");
