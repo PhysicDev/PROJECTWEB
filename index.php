@@ -28,5 +28,9 @@ but for now there are only empty web page with a little bit of css design ... :)
 
 </p>
 </div>
+
+<?php
+        include 'messageBar.php';
+    ?>
 </div>
 </body>
