@@ -218,15 +218,19 @@ input[type=reset]:hover {
   cursor: pointer;
 }
 
+.bar li:hover{
+  background-color: #dfe2ff;
+}
+
 
 #Lbar{
   width:300px;
   min-height: 400px;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 #Rbar{
   width:300px;
   min-height: 400px;
-  margin-left: 50px;
+  margin-left: 30px;
 }

@@ -7,7 +7,7 @@ include("util.php");
 $users = readUsers();
 
 $password=hash("sha512",$password);
-if(isset($users[$user]) && $users[$user]==$password){
+if(isset($users[$user]) && strcmp($users[$user],$password)){
     session_reset();
     session_start();
     $_SESSION['user']=$user;
