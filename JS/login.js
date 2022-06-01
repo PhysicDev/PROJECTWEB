@@ -57,4 +57,7 @@ window.onload = function(){
             }
         }
     }
+
+    document.getElementById("login").onsubmit = checkform();
 }
+
