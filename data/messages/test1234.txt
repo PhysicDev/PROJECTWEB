@@ -1,1 +1,2 @@
 serveur| début du canal test1234
+test1234| salut à tous !!!
