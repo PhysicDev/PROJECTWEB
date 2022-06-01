@@ -148,3 +148,9 @@ input[type=reset]:hover {
   min-height: 400px;
   margin-right: 50px;
 }
+
+#Rbar{
+  width:300px;
+  min-height: 400px;
+  margin-left: 50px;
+}
