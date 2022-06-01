@@ -140,7 +140,16 @@ input[type=reset]:hover {
 #content{
   flex:1;
   min-height: 400px;
+}
 
+#addButton{
+  width: 100px;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #Lbar{

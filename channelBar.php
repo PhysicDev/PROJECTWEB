@@ -9,7 +9,9 @@
         //si l'utilisateur est connecté on affiche le bouton pour créer un salon de discussion
 
         if (isset($connected) && $connected) {
-            echo '<button class="button" onclick="showChannel()">Créer un salon de discussion</button>';
+            
+            include 'channelButton.php';
+            //echo '<button class="button" onclick="showChannel()">Créer un salon de discussion</button>';
         }
     ?>
     <ul>

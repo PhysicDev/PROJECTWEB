@@ -26,10 +26,6 @@ this project is insane and will change the way you see the world !!!
 <br>
 but for now there are only empty web page with a little bit of css design ... :)
 
-<?php
-    //pour tester, à supprimer une fois le code channelBar terminé
-    include 'channelButton.php';
-?>
 </p>
 </div>
 </div>
