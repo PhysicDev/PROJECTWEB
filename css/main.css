@@ -42,6 +42,7 @@ p{
 
 #nav{
   background-color: #f5f5f5;
+  font-size: 19px;
 }
 
 #nav ul{
@@ -209,6 +210,9 @@ input[type=reset]:hover {
   padding:0px;
   margin-bottom: 0px;
   overflow: auto;
+  /*
+    for Firefox :
+  */
   scrollbar-color: #ccc #F5F5F5 ;
   scrollbar-width: thin;
 }

@@ -50,7 +50,7 @@ function checkform(){
 function errorMsg(xmlhttp){
     let jsonDat = JSON.parse(xmlhttp.responseText);
     if(jsonDat["valid"]){
-        document.getElementById("channelList").innerHTML+="<li><a href='channel.php?name="+newChan+"'>"+newChan+"| Admin : "+jsonDat["user"]+"</a></li>";
+        document.getElementById("channelList").innerHTML+="<li>"+newChan+"| Admin : "+jsonDat["user"]+"</a></li>";
         document.getElementById("name").value = "";
     }else{
         addErrors(jsonDat["error"]);
