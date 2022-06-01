@@ -1,4 +1,8 @@
 
+*{
+  transition: all .35s ease-Out;
+}
+
 @font-face {
     font-family: CaviarDreams_Bold;
     src: url("CaviarDreams_Bold.ttf") format("truetype");
@@ -26,12 +30,19 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+  color: #5fdd63;
+}
+
 p{
     margin: 0;
     padding: 0;
     text-align: justify;
 }
 
+#nav{
+  background-color: #f5f5f5;
+}
 
 #nav ul{
   display: flex;
@@ -145,6 +156,11 @@ input[type=reset]:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: all .35s ease-Out;
+}
+
+#addButton:hover{
+  filter:brightness(150%);
 }
 
 #channel{
@@ -156,7 +172,7 @@ input[type=reset]:hover {
   align-items: center;
   border-radius: 40px;
   justify-content: space-between;
-  transition: all .35s ease-Out;
+  transition: all 0.35s ease-Out;
 }
 
 #channel:hover{
