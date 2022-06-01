@@ -7,8 +7,8 @@
             $channel = $_GET["channel"];
             //echo("<li> $channel </li> </li>");
             
-            echo("<div id="."\"messages\""." style=\"display:block\">");
-
+            echo("<div class='bar' id="."\"Rbar\""." style=\"display:block\">");
+            echo("<h2>canal : $channel </h2>");
             $lesMsg = file("data/messages/$channel.txt");
             echo("<ul>");
             foreach ($lesMsg as $msg) {
