@@ -37,9 +37,12 @@
 
 
     if($ok){
-
         $file = fopen("../data/channel.csv", "a");
         fwrite($file, $name."|".$user."\n");
+        fclose($file);
+        //create a new file for the message
+        $file = fopen("../data/messages/".$name.".txt", "w");
+        fwrite($file,"serveur| début du canal ".$name."\n");
         fclose($file);
     }
 

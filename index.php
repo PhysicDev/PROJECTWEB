@@ -24,7 +24,12 @@ This is the main page of the website.</br>
 this project is insane and will change the way you see the world !!!
 <br>
 <br>
-but for now there are only horrible and empty web page without any css design ... :)
+but for now there are only empty web page with a little bit of css design ... :)
+
+<?php
+    //pour tester, à supprimer une fois le code channelBar terminé
+    include 'channelButton.php';
+?>
 </p>
 </div>
 </div>

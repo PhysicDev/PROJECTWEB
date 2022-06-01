@@ -4,6 +4,12 @@ function checkform(){
     document.getElementById("error").style.visibility = "hidden";
     document.getElementById("error").style.display = "none";
     document.getElementById("error").innerHTML = "";
+    
+    for(let i=0;i<document.getElementById("login").children.length;i++){
+        if(document.getElementById("login").children[i].type=="text"||document.getElementById("login").children[i].type=="password" ){
+            document.getElementById("login").children[i].style.borderColor = "unset";
+        }
+    }
 
     for(let i=0;i<document.getElementById("login").children.length;i++){
         if(document.getElementById("login").children[i].type=="text"||document.getElementById("login").children[i].type=="password" ){
