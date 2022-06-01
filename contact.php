@@ -27,5 +27,9 @@ include("php/sessionManager.php");
 </ul>
 </p>
 </div>
+
+<?php
+        include 'messageBar.php';
+    ?>
 </div>
 </body>
