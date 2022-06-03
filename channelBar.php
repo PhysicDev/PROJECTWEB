@@ -31,7 +31,7 @@
                 $nameChannel = $channel[0];
                 $admin = $channel[1];
                 //$nbSalons++;
-                echo("<li>$nameChannel | Admin : $admin</li>");
+                echo("<li id=$nameChannel>$nameChannel | Admin : $admin</li>");
             }
            
            
