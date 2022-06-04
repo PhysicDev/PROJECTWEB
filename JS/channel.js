@@ -1,6 +1,7 @@
 
 //**
 var newChan = "";
+var nbSalon = "";
 function checkform() {
 
     let ok = true;
@@ -52,7 +53,7 @@ function checkform() {
 function errorMsg(xmlhttp) {
     let jsonDat = JSON.parse(xmlhttp.responseText);
     if (jsonDat["valid"]) {
-        document.getElementById("channelList").innerHTML += "<li><a href='channel.php?name=" + newChan + "'>" + newChan + "| Admin : " + jsonDat["user"] + "</a></li>";
+        document.getElementById("channelList").innerHTML+="<li id="+newChan+" class=>"+newChan+"| Admin : "+jsonDat["user"]+"</li>";
         document.getElementById("name").value = "";
     } else {
         addErrors(jsonDat["error"]);
@@ -84,14 +85,6 @@ function goToMsg() {
 }
 
 
-
-window.onload = function(){
-    //on cache la div si on clique dessus
-    document.getElementById("error").onclick = function(){
-        document.getElementById("error").style.visibility = "hidden";
-        document.getElementById("error").style.display = "none";
-    }
-}
 window.onload = function () {
 
     //on cache la div si on clique dessus

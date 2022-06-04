@@ -7,7 +7,7 @@
             $channel = $_GET["channel"];
             //echo("<li> $channel </li> </li>");
             
-            echo("<div class='bar' id="."\"Rbar\"".">");
+            echo("<div class='bar' id=Rbar>");
             echo("<h2>canal : $channel </h2>");
             $lesMsg = file("data/messages/$channel.txt");
             echo("<ul>");
@@ -24,7 +24,7 @@
             echo("</ul>");
         }
     else {        
-        echo("<div id="."\"Rbar\""." style=\"display:none\">");
+        echo("<div class='bar' id="."\"Rbar\""." style=\"display:none\">");
     }
 
 

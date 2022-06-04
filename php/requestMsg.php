@@ -14,8 +14,7 @@
             $i++;
             //le truc avec le $i c'est pour le style css.
             echo("<li class='".($i%2==0?"even":"odd")."'>$pers : $leMsg</li>");
-        }     
-        
+        }
         echo("</ul>");
     //}
 
