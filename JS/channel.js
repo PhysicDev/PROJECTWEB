@@ -1,3 +1,5 @@
+
+//**
 var newChan = "";
 function checkform() {
 
@@ -82,8 +84,16 @@ function goToMsg() {
     simpleAjax("php/requestMsg.php", 'post', "channelName=" + this.id, on_success, on_failure)
 }
 
-window.onload = function () {
 
+
+window.onload = function(){
+    //on cache la div si on clique dessus
+    document.getElementById("error").onclick = function(){
+        document.getElementById("error").style.visibility = "hidden";
+        document.getElementById("error").style.display = "none";
+    }
+}
+window.onload = function () {
 
     //on cache la div si on clique dessus
     document.getElementById("error").onclick = function () {
