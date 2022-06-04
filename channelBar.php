@@ -3,7 +3,6 @@
         //si l'utilisateur est connecté on affiche le bouton pour créer un salon de discussion
 
         if (isset($connected) && $connected) {
-            
             include 'channelButton.php';
         }
     ?>
