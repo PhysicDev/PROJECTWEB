@@ -24,7 +24,7 @@ function addMessage(xmlhttp){
     var response = parseJSON(xmlhttp.responseText);
     if(response.state == "ok"){
         lastMSG++;
-        document.getElementById("msgArea").innerHTML += "<li class='"+(lastMSG%2==0?"even":"odd")+"'>"+document.getElementById("messageDat").value+":"+document.getElementById("messageDat").value"</li>";
+        document.getElementById("msgArea").innerHTML += "<li class='"+(lastMSG%2==0?"even":"odd")+"'>"+document.getElementById("messageDat").value+":"+document.getElementById("messageDat").value+"</li>";
         document.getElementById("messageDat").value="";
     }else{
         errorMsg();
