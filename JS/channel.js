@@ -80,7 +80,6 @@ function on_failure(xmlhttp) {
 }
 
 function goToMsg() {
-    alert("channelName=" + this.id);
     simpleAjax("php/requestMsg.php", 'post', "channelName=" + this.id, on_success, on_failure)
 }
 
