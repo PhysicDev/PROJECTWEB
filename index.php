@@ -34,3 +34,4 @@ but for now there are only empty web page with a little bit of css design ... :)
     ?>
 </div>
 </body>
+<script type="text/javascript" src="JS/init.js"></script>

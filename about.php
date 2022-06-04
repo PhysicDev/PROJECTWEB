@@ -27,9 +27,9 @@ it has no purpose except to create a live chat with an ajax application
 but i will maybe add a multiplayer connect4 game in the future.
 </p>
 </div>
-
 <?php
         include 'messageBar.php';
     ?>
 </div>
 </body>
+<script type="text/javascript" src="JS/init.js"></script>

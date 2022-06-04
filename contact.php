@@ -33,3 +33,4 @@ include("php/sessionManager.php");
     ?>
 </div>
 </body>
+<script type="text/javascript" src="JS/init.js"></script>

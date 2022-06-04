@@ -1,20 +1,21 @@
 serveur| début du canal test1234
 test1234| salut à tous !!!
 test1234| salut à tous !!!
+PhysicGamer|TEST
+PhysicGamer|TEST
+PhysicGamer|TEST
+PhysicGamer|TEst
+PhysicGamer|BLABLABLA
+PhysicGamer|BLABLABLA
+PhysicGamer|BLABLABLA
 test1234| salut à tous !!!
 test1234| salut à tous !!!
 test1234| salut à tous !!!
 test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
-test1234| salut à tous !!!
+PhysicGamer|Test
+PhysicGamer|Salut
+PhysicGamer|Test
+PhysicGamer|Salut
+PhysicGamer|encore un Test
+PhysicGamer|encore un Test
+PhysicGamer|Test3

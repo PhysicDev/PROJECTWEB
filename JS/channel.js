@@ -71,33 +71,17 @@ function addErrors(array) {
 }
 
 
-function on_success(xmlhttp) {
-    document.getElementById("Rbar").innerHTML = xmlhttp.responseText;
-    document.getElementById("Rbar").setAttribute("style", "display:block");
-}
-
-function on_failure(xmlhttp) {
-    alert("erreur");
-}
 
 function goToMsg() {
-    simpleAjax("php/requestMsg.php", 'post', "channelName=" + this.id, on_success, on_failure)
-}
-
-
-window.onload = function () {
-
-    //on cache la div si on clique dessus
-    document.getElementById("error").onclick = function () {
-        document.getElementById("error").style.visibility = "hidden";
-        document.getElementById("error").style.display = "none";
-    }
-    //------------------------------------------------------------------------//
-
-    var parcours = document.querySelectorAll("#channelList li");
-    for (let i = 0; i < parcours.length; i++) {
-        parcours[i].onclick = goToMsg;
+    var channel = this.id;
+    simpleAjax("php/requestMsg.php", 'post', "channelName=" + channel, on_success, on_failure);
+    function on_success(xmlhttp) {
+        document.getElementById("Rbar").innerHTML = xmlhttp.responseText;
+        document.getElementById("Rbar").setAttribute("name",channel);
+        document.getElementById("Rbar").setAttribute("style", "display:block");
     }
 
-    //console.log(document.getElementById("channelList"));
+    function on_failure(xmlhttp) {
+        alert("erreur");
+    }
 }

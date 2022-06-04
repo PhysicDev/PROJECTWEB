@@ -224,7 +224,9 @@ max-height: 100%;
   scrollbar-width: thin;
 }
 
-.bar li{
+.bar li{         
+  word-break: break-all;
+  max-width:100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

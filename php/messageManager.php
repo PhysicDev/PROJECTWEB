@@ -15,11 +15,11 @@ if(!isset($_POST["channel"])){
 
 $channel = $_POST["channel"];
 
-if(!isset($_POST["message"]) || !isset($_POST("lastMSG"))){
+if(!isset($_POST["message"]) && !isset($_POST["lastMSG"])){
     http_response_code(400);
 }
 
-if(!file_exists("data/messages/$channel.txt")){
+if(!file_exists("../data/messages/$channel.txt")){
     http_response_code(404);
 }
 
@@ -27,11 +27,11 @@ if(isset($_POST["message"])){
     //requête envoyer message
     $message = $_POST["message"];
     
-    $file = fopen("../data/message/$channel.txt", "a");
+    $file = fopen("../data/messages/$channel.txt", "a");
     fwrite($file, $user."|".$message."\n");
     fclose($file);
 
-    echo "{\"state\":true}";
+    echo "{\"state\":true,\"user\":\"$user\"}";
 }else{
     //requête recupérer message
     $lastMSG = intval($_POST["lastMSG"]);

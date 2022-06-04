@@ -3,9 +3,11 @@
         $channel = $_POST["channelName"];
         //echo("<li> $channel </li> </li>");
         
+        setcookie("channel", $channel, time() + 86400,"/");
+        
         echo("<h2>canal : $channel </h2>");
         $lesMsg = file("../data/messages/$channel.txt");
-        echo("<ul>");
+        echo("<ul id='msgArea'>");
         $i=0;
         foreach ($lesMsg as $msg) {
             $msgEtPers = explode("|", $msg);
@@ -46,7 +48,7 @@
 ?>
 <div id="textMessage">
 <textarea id="messageDat" placeholder="envoyer un message"></textarea>
-<img id="sendButton" src="images/send.png" type="submit" value="submit" onclick="sendForm()" />
+<img id="sendButton" src="images/send.png" type="submit" value="submit" onclick="sendMSG" />
 </div>
 </div>
 
