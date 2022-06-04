@@ -8,15 +8,18 @@
             $channel = $_GET["channel"];
             //echo("<li> $channel </li> </li>");
             
-            echo("<div class='bar' id="."\"Rbar\""." style=\"display:block\">");
+            echo("<div class='bar' id="."\"Rbar\"".">");
             echo("<h2>canal : $channel </h2>");
             $lesMsg = file("data/messages/$channel.txt");
             echo("<ul>");
+            $i=0;
             foreach ($lesMsg as $msg) {
                 $msgEtPers = explode("|", $msg);
                 $leMsg = $msgEtPers[1];
                 $pers = $msgEtPers[0];
-                echo("<li>$pers : $leMsg</li>");
+                $i++;
+                //le truc avec le $i c'est pour le style css.
+                echo("<li class='".($i%2==0?"even":"odd")."'>$pers : $leMsg</li>");
             }     
             
             echo("</ul>");
@@ -32,3 +35,8 @@
 
     echo("<div class='bar' id="."\"Rbar\""." style=\"display:none\">");
 ?>
+<div id="textMessage">
+<textarea id="messageDat" placeholder="envoyer un message"></textarea>
+<img id="sendButton" src="images/send.png" type="submit" value="submit" onclick="sendForm()" />
+</div>
+</div>

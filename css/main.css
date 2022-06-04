@@ -42,6 +42,7 @@ p{
 
 #nav{
   background-color: #f5f5f5;
+  font-size: 19px;
 }
 
 #nav ul{
@@ -138,6 +139,10 @@ input[type=reset]:hover {
   transition: all .35s ease-Out;
 }
 
+#container{
+  height:90vh;
+}
+
 #main{
   display: flex;
   flex-direction: row;
@@ -148,6 +153,7 @@ input[type=reset]:hover {
   overflow: hidden;
   border:unset;
   min-height: 400px;
+  height:calc(100% - 190px);
 }
 
 #addButton{
@@ -162,6 +168,7 @@ input[type=reset]:hover {
 #addButton:hover{
   filter:brightness(150%);
 }
+
 
 #channel{
   padding: 0px;
@@ -200,12 +207,21 @@ input[type=reset]:hover {
 }
 
 .bar {
-  padding:3px;
+  padding:0px;
+  background-color: #f2f3ff;
 }
 
 .bar ul{
-  max-height: 500px;
+max-height: 100%;
+  margin-left: 0px;
+  padding:0px;
+  margin-bottom: 0px;
   overflow: auto;
+  /*
+    for Firefox :
+  */
+  scrollbar-color: #ccc #F5F5F5 ;
+  scrollbar-width: thin;
 }
 
 .bar li{
@@ -233,4 +249,79 @@ input[type=reset]:hover {
   width:400px;
   min-height: 400px;
   margin-left: 30px;
+}
+
+ #Rbar ul{
+   max-height:calc(100% - 140px);
+ }
+
+
+
+.odd{
+  background-color: #f0f2ff;
+}
+
+.even{
+  background-color: #ffffff;
+}
+
+/*
+
+GOOGLE SCROLLBAR
+
+*/
+*::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+/**  STYLE 11 */
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(left, #fff, #e4e4e4);
+  border: 1px solid #aaa;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(left, #22ADD4, #1E98BA);
+}
+
+#textMessage{
+  padding:0px;
+  width:100%;
+  border:unset;
+  box-shadow: unset;
+  margin-bottom: -5px;
+  background-color: #dfe2ff00;
+  height:60px;
+}
+
+#textMessage textarea{
+  outline: none;
+  resize:none;
+  width:calc(100% - 70px);
+  height:calc(100% - 4px);
+  border-radius: 4px;
+}
+
+#sendButton{
+  width: 50px;
+  margin:  0px;
+  border: none;
+  cursor: pointer;
+  transition: all .35s ease-Out;
+}
+
+#sendButton:hover{
+  filter:hue-rotate(130deg) brightness(125%) contrast(125%);
 }
