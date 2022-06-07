@@ -7,12 +7,11 @@
 <?php
     if (isset($_COOKIE["channel"]) && $_COOKIE["channel"] && file_exists("data/messages/" . $_COOKIE["channel"] . ".txt") && isset($connected) && $connected) {
             $channel = $_COOKIE["channel"];
-            //echo("<li> $channel </li> </li>");
             
             echo("<div name='$channel' class='bar' id=Rbar>");
             echo("<h2>canal : $channel </h2>");
             $lesMsg = file("data/messages/$channel.txt");
-            echo("<ul id='msgArea'>");
+            echo("<ul id='msgArea' nbMSG='".count($lesMsg)."'>");
             foreach ($lesMsg as $msg) {
                 $msgEtPers = explode("|", $msg);
                 $leMsg = $msgEtPers[1];

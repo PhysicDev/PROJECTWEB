@@ -3,7 +3,7 @@
 var newChan = "";
 var nbSalon = "";
 function checkform() {
-
+    alert("working");
     let ok = true;
     document.getElementById("error").style.visibility = "hidden";
     document.getElementById("error").style.display = "none";
@@ -79,6 +79,7 @@ function goToMsg() {
         document.getElementById("Rbar").innerHTML = xmlhttp.responseText;
         document.getElementById("Rbar").setAttribute("name",channel);
         document.getElementById("Rbar").setAttribute("style", "display:block");
+        initMSG();
     }
 
     function on_failure(xmlhttp) {

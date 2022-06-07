@@ -39,6 +39,7 @@ function next(xmlhttp){
     if(jsonDat.valid){
         document.location.href="index.php";
     }else{
+        //alert(xmlhttp.responseText);
         document.getElementById("error").innerHTML = "mauvais identifiant ou mot de passe</br>";
         document.getElementById("error").style.visibility = "visible";
         document.getElementById("error").style.display = "block";

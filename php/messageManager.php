@@ -34,17 +34,18 @@ if(isset($_POST["message"])){
     echo "{\"state\":true,\"user\":\"$user\"}";
 }else{
     //requête recupérer message
-    $lastMSG = intval($_POST["lastMSG"]);
+    $lastMSG = intval($_POST["lastMSG"])-1;
     $MSG=readMSG($channel);
-    if($lastMSG<count($MSG)){
-            echo "{\"state\":'New','dat':'";
+    http_response_code(200);
+    if($lastMSG+1<count($MSG)){
+            echo "{\"state\":\"new\",\"dat\":\"";
             $i=$lastMSG+1;
             for($i;$i<count($MSG);$i++){
                 echo("<li class='".($i%2==0?"even":"odd")."'>".$MSG[$i][0]." : ".$MSG[$i][1]."</li>");
             }
-            echo"'}";
+            echo"\",\"last\":".count($MSG)."}";
     }else{
-        echo "{\"state\":'RAS'}";
+        echo "{\"state\":\"RAS\",\"last\":".count($MSG)."}";
     }
 }
 

@@ -1,14 +1,11 @@
 
+var ping=null;
 window.onload = function(){
     //on met la scroll bar en bas
-    document.getElementById("msgArea").scrollTop = document.getElementById("msgArea").scrollHeight;
-    setInterval(askNewMSG,1000);
+    if(document.getElementById("msgArea")){
+        initMSG();
+    }
 
-    //convert to int
-    lastMSG = 8090920;//parseInt(document.getElementById("msgArea").getAttribute("nbMSG"));
-    channel = document.getElementById("Rbar").getAttribute("name");
-
-    document.getElementById("messageDat").onclick = resetTextArea;
     
     //on cache la div si on clique dessus
     document.getElementById("error").onclick = function () {
@@ -22,4 +19,17 @@ window.onload = function(){
         parcours[i].onclick = goToMsg;
     }
 
+}
+
+function initMSG(){
+    console.log(document.getElementById("msgArea"));
+    document.getElementById("msgArea").scrollTop = document.getElementById("msgArea").scrollHeight;
+
+    //convert to int
+    lastMSG = parseInt(document.getElementById("msgArea").getAttribute("nbMSG"));
+    channel = document.getElementById("Rbar").getAttribute("name");
+    if(!ping){
+        ping=setInterval(askNewMSG,1000);
+    }
+    document.getElementById("messageDat").onclick = resetTextArea;
 }
