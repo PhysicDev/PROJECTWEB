@@ -3,7 +3,6 @@
 var newChan = "";
 var nbSalon = "";
 function checkform() {
-    alert("working");
     let ok = true;
     document.getElementById("error").style.visibility = "hidden";
     document.getElementById("error").style.display = "none";
@@ -86,6 +85,5 @@ function goToMsg() {
     }
 
     function on_failure(xmlhttp) {
-        alert("erreur");
     }
 }

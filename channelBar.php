@@ -3,8 +3,9 @@
         //si l'utilisateur est connecté on affiche le bouton pour créer un salon de discussion
 
         if (isset($connected) && $connected) {
-            
             include 'channelButton.php';
+        }else{
+            echo("vous devez être connecté pour créer des canaux");
         }
     ?>
         <?php
@@ -22,13 +23,12 @@
                 $admin = $channel[1];
                 //$nbSalons++;
                 //le truc avec le $i c'est pour le style css.
-                echo("<li id='$nameChannel' class='".($i%2==0?"even":"odd")."'>$nameChannel | Admin : $admin");
+                echo("<li id='$nameChannel' class='".($i%2==0?"even":"odd")."'>$nameChannel |</br> Admin : $admin");
                 if(strcmp(trim($data[1]),"null")){
                     echo("<img src='images/lock.png' class='icon'/>");
                 }
                 echo("</li>");
             }
-
         ?>
     </ul>
 </div>

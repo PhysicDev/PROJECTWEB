@@ -27,11 +27,17 @@ if(isset($_POST["message"])){
     //requête envoyer message
     $message = $_POST["message"];
     
-    $file = fopen("../data/messages/$channel.txt", "a");
-    fwrite($file, $user."|".$message."\n");
-    fclose($file);
+    //sécurité pour éviter que l'utilisateur bidouille dans le code
+    if(preg_match("/[<>\"'\/]/", $message)){
+        http_response_code(400);
+        echo "{\"state\":false,\"user\":\"$user\"}";
+    }else{
+        $file = fopen("../data/messages/$channel.txt", "a");
+        fwrite($file, $user."|".$message."\n");
+        fclose($file);
+        echo "{\"state\":true,\"user\":\"$user\"}";
+    }
 
-    echo "{\"state\":true,\"user\":\"$user\"}";
 }else{
     //requête recupérer message
     $lastMSG = intval($_POST["lastMSG"])-1;

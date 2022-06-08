@@ -7,4 +7,4 @@
                 <input id="psw" type="password" name="name" placeholder="mot de passe"></input>
         </div>
 </div>
-<div id="error" style="visibility:hidden"></div>
+<div id="error" class=".error" style="visibility:hidden"></div>

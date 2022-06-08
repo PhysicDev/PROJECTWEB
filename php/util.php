@@ -17,15 +17,19 @@ function readUsers(){
     }
 
     function readChannel(){
-        $file = fopen("../data/channel.csv", "r");
+        $path = "../data/channel.csv";
+        if(!file_exists($path)){
+            $path = "data/channel.csv";
+        }
+        $file = fopen($path, "r");
         $users = array();
-        $lines = explode("\n", fread($file, filesize("../data/channel.csv")));
+        $lines = explode("\n", fread($file, filesize($path)));
         foreach($lines as $line){
             //check if the line is empty
             if(!empty($line)){
                 $dat = explode("#",$line);
                 $subDat = explode("|",$dat[0]);
-                $users[$subDat[0]] = [$subDat[1],$dat[1]];
+                $users[$subDat[0]] = [$subDat[1],trim($dat[1])];
             }
         }
         fclose($file);

@@ -33,3 +33,5 @@ superMario|ça marche !!!
 PhysicGamer|blabla
 PhysicGamer|blabla
 PhysicGamer|blabla
+PhysicGamer|<span style='color:red'> test </span>
+PhysicGamer|test

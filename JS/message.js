@@ -54,6 +54,7 @@ function addMessage(xmlhttp){
 }
 
 function errorOnMsg(xmlhttp){
+    alert("bruh");
     document.getElementById("messageDat").placeholder="un erreur est survenue, message non envoyé";
     document.getElementById("messageDat").style.border = "1px solid red";
     document.getElementById("messageDat").value="";

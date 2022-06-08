@@ -129,7 +129,7 @@ input[type=reset]:hover {
   transition: all .35s ease-Out;
 }
 
-#error{
+.error{
   display:none;
   border : 1px solid red;
   width:50%;
@@ -195,7 +195,7 @@ input[type=reset]:hover {
   transition: all .35s ease-Out;
 }
 
-.bar #error{
+.bar .error{
   padding: 5px;
   margin-top: 5px;
   width: 75%;
@@ -225,11 +225,13 @@ input[type=reset]:hover {
 }
 
 .bar ul{
-max-height: 100%;
+max-height: calc(100% - 148px);
   margin-left: 0px;
   padding:0px;
   margin-bottom: 0px;
-  overflow: auto;
+  overflow: scroll ;
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
   /*
     for Firefox :
   */
@@ -348,3 +350,19 @@ GOOGLE SCROLLBAR
   border-radius: 4px;
   transition: all .35s ease-Out;
 }
+
+#msgForm{
+  display: flex;
+  padding:5px;
+  background-color: unset;
+  box-shadow: unset;
+  border:unset;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#msgPass{
+  width:100%;
+}
+
