@@ -38,7 +38,12 @@
 
     if($ok){
         $file = fopen("../data/channel.csv", "a");
-        fwrite($file, $name."|".$user."\n");
+        fwrite($file, $name."|".$user);
+        if(isset($_POST["password"])){
+            fwrite($file,"#".$_POST["password"]."\n");
+        }else{
+            fwrite($file,"#null\n");
+        }
         fclose($file);
         //create a new file for the message
         $file = fopen("../data/messages/".$name.".txt", "w");

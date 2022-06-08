@@ -189,7 +189,7 @@ input[type=reset]:hover {
 #channel input{
   width: 90%;
   margin:0px;
-  height:50px;
+  height:25px;
   display:none;
   border-radius: 25px;
   transition: all .35s ease-Out;
@@ -204,6 +204,19 @@ input[type=reset]:hover {
 
 #channel:hover input{
   display: block;
+}
+
+#channel:hover div{
+  display: block;
+}
+
+#channel div{
+  height:50px;
+  width: 90%;
+  padding:0px;
+  display:none;
+  border-radius: 25px;
+  border:unset;
 }
 
 .bar {
@@ -326,4 +339,12 @@ GOOGLE SCROLLBAR
 
 #sendButton:hover{
   filter:hue-rotate(130deg) brightness(125%) contrast(125%);
+}
+
+.icon{
+  width: 30px;
+  margin:  0px;
+  border: none;
+  border-radius: 4px;
+  transition: all .35s ease-Out;
 }

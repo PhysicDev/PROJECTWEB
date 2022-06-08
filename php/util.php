@@ -23,8 +23,9 @@ function readUsers(){
         foreach($lines as $line){
             //check if the line is empty
             if(!empty($line)){
-                $dat = explode("|",$line);
-                $users[$dat[0]] = $dat[1];
+                $dat = explode("#",$line);
+                $subDat = explode("|",$dat[0]);
+                $users[$subDat[0]] = [$subDat[1],$dat[1]];
             }
         }
         fclose($file);

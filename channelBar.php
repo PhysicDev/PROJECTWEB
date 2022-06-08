@@ -14,14 +14,19 @@
             $nbSalons = count($lesChannels);
             echo("<p style='margin-left:10px;margin-top:20px'>il y a $nbSalons salons de discution" . "</p>" . "<ul id='channelList'>");
             $i = 0;
-            foreach ($lesChannels as $channel) {
+            foreach ($lesChannels as $line) {
                 $i++;
-                $channel = explode("|", $channel);
+                $data = explode("#", $line);
+                $channel = explode("|", $data[0]);
                 $nameChannel = $channel[0];
                 $admin = $channel[1];
                 //$nbSalons++;
                 //le truc avec le $i c'est pour le style css.
-                echo("<li id='$nameChannel' class='".($i%2==0?"even":"odd")."'>$nameChannel | Admin : $admin</li>");
+                echo("<li id='$nameChannel' class='".($i%2==0?"even":"odd")."'>$nameChannel | Admin : $admin");
+                if(strcmp(trim($data[1]),"null")){
+                    echo("<img src='images/lock.png' class='icon'/>");
+                }
+                echo("</li>");
             }
 
         ?>

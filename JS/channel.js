@@ -12,7 +12,7 @@ function checkform() {
     var errors = [""];
 
     for (let i = 0; i < document.getElementById("channel").children.length; i++) {
-        if (document.getElementById("channel").children[i].type == "text" || document.getElementById("channel").children[i].type == "password") {
+        if (document.getElementById("channel").children[i].type == "text") {
             if (document.getElementById("channel").children[i].value == "") {
                 ok = false;
                 document.getElementById("error").innerHTML += "le champ " + document.getElementById("channel").children[i].placeholder + " est vide</br>";
@@ -22,7 +22,10 @@ function checkform() {
             }
         }
     }
-
+    let password = "null";
+    if(!document.getElementById("psw").value == ""){
+        password = document.getElementById("psw").value;
+    }
 
     if (name.length < 5) {
         ok = false;
@@ -43,7 +46,7 @@ function checkform() {
 
     if (ok) {
         newChan = name;
-        new simpleAjax("php/channelFormValid.php", "post", "name=" + name, errorMsg);
+        new simpleAjax("php/channelFormValid.php", "post", "name=" + name + "&password=" +password, errorMsg);
     } else {
         addErrors(errors);
     }
