@@ -87,3 +87,14 @@ function goToMsg() {
     function on_failure(xmlhttp) {
     }
 }
+
+/*
+function rechercheCanaux() {
+    function on_success(xmlhttp) {
+        document.getElementById("").innerHTML = xmlhttp.responseText;
+    }
+
+   simpleAjax("php/requestSearch.php", "post" , "search=" + document.getElementById("search").value, on_success, on_failure);
+    
+}
+*/
