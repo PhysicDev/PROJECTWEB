@@ -225,13 +225,12 @@ input[type=reset]:hover {
 }
 
 .bar ul{
-max-height: calc(100% - 148px);
+  max-height: calc(100% - 148px);
   margin-left: 0px;
   padding:0px;
   margin-bottom: 0px;
-  overflow: scroll ;
   overflow: -moz-scrollbars-vertical; 
-  overflow-y: scroll;
+  overflow-x: hidden;
   /*
     for Firefox :
   */

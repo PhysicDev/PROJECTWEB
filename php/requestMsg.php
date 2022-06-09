@@ -9,8 +9,11 @@
         $Dat = readChannel();
         if(!strcmp($Dat[$channel][1],"null")){
 
-        
-        $lesMsg = file("../data/messages/$channel.txt");
+        if(!file_exists("../data/messages/$channel.txt")){
+            $lesMsg = file("data/messages/$channel.txt");
+        }else{
+            $lesMsg = file("../data/messages/$channel.txt");
+        }
         echo("<ul id='msgArea' nbMSG='".count($lesMsg)."'>");
         $i=0;
         foreach ($lesMsg as $msg) {
