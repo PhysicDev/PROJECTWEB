@@ -14,7 +14,7 @@
             $nbSalons = 0;
             $lesChannels = file("data/channel.csv");
             $nbSalons = count($lesChannels);
-            echo("<p style='margin-left:10px;margin-top:20px'>il y a $nbSalons salons de discution" . "</p>" . "<ul id='channelList'>");
+            echo("<p style='margin-left:10px;margin-top:20px'>il y a <span id='nbSalons'>$nbSalons</span> salons de discution" . "</p>" . "<ul id='channelList'>");
             $i = 0;
             foreach ($lesChannels as $line) {
                 $i++;

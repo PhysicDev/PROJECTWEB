@@ -88,13 +88,19 @@ function goToMsg() {
     }
 }
 
-/*
+
 function rechercheCanaux() {
     function on_success(xmlhttp) {
-        document.getElementById("").innerHTML = xmlhttp.responseText;
+        document.getElementById("channelList").innerHTML = xmlhttp.responseText;
+        var parcours = document.querySelectorAll("#channelList li");
+        for (let i = 0; i < parcours.length; i++) {
+            parcours[i].onclick = goToMsg;
+        }
+        document.getElementById("nbSalons").innerHTML = parcours.length;
     }
-
+    function on_failure(xmlhttp) {
+        alert("Erreur de rechercheCanaux()");
+    }
    simpleAjax("php/requestSearch.php", "post" , "search=" + document.getElementById("search").value, on_success, on_failure);
     
 }
-*/

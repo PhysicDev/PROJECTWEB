@@ -7,4 +7,4 @@
 </div>
 -->
 
-<input id="search" type="text" name="name" placeholder="recherche" onkeyup="rechercheCanaux"> </input>
+<input id="search" type="text" name="name" placeholder="recherche" onKeyUp="rechercheCanaux()"> </input>
