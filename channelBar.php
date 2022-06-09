@@ -4,6 +4,7 @@
 
         if (isset($connected) && $connected) {
             include 'channelButton.php';
+            include 'recherche.php';
         }else{
             echo("vous devez être connecté pour créer des canaux");
         }
