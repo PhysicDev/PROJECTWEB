@@ -29,7 +29,8 @@ function readUsers(){
             if(!empty($line)){
                 $dat = explode("#",$line);
                 $subDat = explode("|",$dat[0]);
-                $users[$subDat[0]] = [$subDat[1],trim($dat[1])];
+                $allowed = array_slice($subDat, 1, count($subDat));
+                $users[$subDat[0]] = array($subDat[1],trim($dat[1]),$allowed);
             }
         }
         fclose($file);

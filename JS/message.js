@@ -65,3 +65,7 @@ function resetTextArea(){
     document.getElementById("messageDat").style.border = "unset";
 }
 
+function addUser(){
+    alert("ok");
+}
+

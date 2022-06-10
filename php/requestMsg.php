@@ -3,12 +3,16 @@
         if(!isset($channel)){
             $channel = $_POST["channelName"];
         }
+
+        //if not session started start it
+        if (!isset($_SESSION)) {
+            include("sessionManager.php");
+        }
         //echo("<li> $channel </li> </li>");
         echo("<h2>canal : $channel </h2>");
         include("util.php");
         $Dat = readChannel();
-        if(!strcmp($Dat[$channel][1],"null")){
-
+        if(!strcmp($Dat[$channel][1],"null") || in_array($user,$Dat[$channel][2])){
         if(!file_exists("../data/messages/$channel.txt")){
             $lesMsg = file("data/messages/$channel.txt");
         }else{

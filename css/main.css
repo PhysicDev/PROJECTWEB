@@ -174,7 +174,7 @@ input[type=reset]:hover {
   padding: 0px;
   display: flex;
   width:50px;
-  margin-top: 25px;
+  margin-top: 5px;
   flex-direction: row;
   align-items: center;
   border-radius: 40px;
@@ -225,7 +225,7 @@ input[type=reset]:hover {
 }
 
 .bar ul{
-  max-height: calc(100% - 148px);
+  max-height: calc(100% - 172px);
   margin-left: 0px;
   padding:0px;
   margin-bottom: 0px;
@@ -254,7 +254,6 @@ input[type=reset]:hover {
   background-color: #dfe2ff;
 }
 
-
 #Lbar{
   width:400px;
   min-height: 400px;
@@ -270,7 +269,6 @@ input[type=reset]:hover {
  #Rbar ul{
    max-height:calc(100% - 140px);
  }
-
 
 
 .odd{

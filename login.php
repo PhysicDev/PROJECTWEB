@@ -17,6 +17,6 @@
         <input id="password" type="password" name="password" placeholder="password"></input>
         <input class="button" type="submit" value="submit" onclick="checkform()"></input>
     </div>
-    <div id="error" class=".error" style="visibility:hidden"></div>
+    <div id="error" class="error" style="visibility:hidden"></div>
 </div>
 </body>

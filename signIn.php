@@ -21,6 +21,6 @@
                 <input class="button" type="reset" value="reset" onclick="resetform();"></input>
             </div>
         </div>
-        <div id="error"  class=".error" style="visibility:hidden"></div>
+        <div id="error"  class="error" style="visibility:hidden"></div>
     </div>
 </body>
