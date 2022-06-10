@@ -79,7 +79,9 @@ function addUser(){
                 document.getElementById("Rbar").setAttribute("style", "display:block");
                 initMSG();
             }
-        
+            document.getElementById(channel).removeChild(document.getElementById(channel).children[1]);
+            document.getElementById(channel).innerHTML+="<img src='images/quit.png' class='icon Hicon' onClick='leaveChannel(\""+channel+"\")'/><img src='images/lockopen.png' class='icon'/>";
+            
             function on_failure(xmlhttp) {
             }
         }else{
