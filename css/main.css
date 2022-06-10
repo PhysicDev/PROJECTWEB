@@ -250,6 +250,10 @@ input[type=reset]:hover {
   cursor: pointer;
 }
 
+.bar li span{
+  min-width: calc(100% - 80px);
+}
+
 .bar li:hover{
   background-color: #dfe2ff;
 }
@@ -341,11 +345,21 @@ GOOGLE SCROLLBAR
 }
 
 .icon{
+  display:inline;
   width: 30px;
   margin:  0px;
   border: none;
   border-radius: 4px;
   transition: all .35s ease-Out;
+}
+
+.Hicon{
+  margin-right: 0px;
+  float:right;
+}
+
+.Hicon:hover{
+  filter:brightness(180%);
 }
 
 #msgForm{

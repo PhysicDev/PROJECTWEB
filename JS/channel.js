@@ -104,3 +104,21 @@ function rechercheCanaux() {
    simpleAjax("php/requestSearch.php", "post" , "search=" + document.getElementById("search").value, on_success, on_failure);
     
 }
+
+function leaveChannel(channel){
+    simpleAjax("php/ChannelManager.php", 'post', "channel=" + channel, on_success, on_failure);
+
+    function on_success(xmlhttp) {
+        let dat = JSON.parse(xmlhttp.responseText);
+        if(dat["deleted"]){
+            document.getElementById(channel).remove();
+            document.getElementById("nbSalons").innerHTML = document.getElementById("channelList").children.length;
+        }else if(dat["state"]){
+            document.getElementById(channel).removeChild(document.getElementById(channel).children[1]);
+            document.getElementById(channel).removeChild(document.getElementById(channel).children[1]);
+            document.getElementById(channel).innerHTML +="<img src='images/lock.png' class='icon'/>";
+        }
+    }
+    function on_failure(xmlhttp) {
+    }
+}
