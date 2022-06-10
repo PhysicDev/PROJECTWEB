@@ -40,7 +40,7 @@
         else{
             echo("<h2>Vous n'êtes pas autorisé à parler sur ce canal</h2>");
             echo('<p> veuillez entrer le mot de passe pour accéder au canal :</p>');
-            echo('<div id="msgForm"><input type="password" id="msgPass" placeholder="mot de passe" /><input type="submit" id="sendPass" value="valider" onClick="addUser()"/><div class="error"></div></div>');
+            echo('<div id="msgForm"><input type="password" id="msgPass" placeholder="mot de passe" /><input type="submit" id="sendPass" value="valider" onClick="addUser()"/><div id="msgErr" class="error" onClick="resetDiv()"></div></div>');
         }
         
         setcookie("channel", $channel, time() + 86400,"/");

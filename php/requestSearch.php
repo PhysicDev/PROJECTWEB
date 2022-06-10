@@ -3,6 +3,12 @@
     $recherche = $_POST['search'];
     $i =0;
 
+    if (!function_exists('str_contains')) {
+        function str_contains($haystack, $needle) {
+            return $needle !== '' && mb_strpos($haystack, $needle) !== false;
+        }
+    }
+
     $lesChannels = file("../data/channel.csv");
     foreach ($lesChannels as $line) {
         $data = explode("#", $line);

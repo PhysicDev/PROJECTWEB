@@ -54,7 +54,6 @@ function addMessage(xmlhttp){
 }
 
 function errorOnMsg(xmlhttp){
-    alert("bruh");
     document.getElementById("messageDat").placeholder="un erreur est survenue, message non envoyé";
     document.getElementById("messageDat").style.border = "1px solid red";
     document.getElementById("messageDat").value="";
@@ -66,6 +65,39 @@ function resetTextArea(){
 }
 
 function addUser(){
-    alert("ok");
+    let password = document.getElementById("msgPass").value;
+    channel = document.getElementById("Rbar").getAttribute("name");
+    new simpleAjax("php/channelManager.php","post","channel="+channel+"&password="+password+"",result,errorOnMsg);
+
+    function result(xmlhttp){
+        let dat = JSON.parse(xmlhttp.responseText);
+        if(dat.state){
+            simpleAjax("php/requestMsg.php", 'post', "channelName=" + channel, on_success, on_failure);
+            function on_success(xmlhttp) {
+                document.getElementById("Rbar").innerHTML = xmlhttp.responseText;
+                document.getElementById("Rbar").setAttribute("name",channel);
+                document.getElementById("Rbar").setAttribute("style", "display:block");
+                initMSG();
+            }
+        
+            function on_failure(xmlhttp) {
+            }
+        }else{
+            document.getElementById("msgErr").style.visibility = "visible";
+            document.getElementById("msgErr").style.display = "block";
+            document.getElementById("msgErr").innerHTML = "mauvais mot de passe";
+        }
+    }
+
+    function errorOnMsg(xmlhttp){
+        document.getElementById("msgErr").style.visibility = "visible";
+        document.getElementById("msgErr").style.display = "block";
+        document.getElementById("msgErr").innerHTML = "un erreur est survenue, impossible d'ajouter l'utilisateur";
+    }
+}
+
+function resetDiv(){
+    document.getElementById("msgErr").style.visibility = "hidden";
+    document.getElementById("msgErr").style.display = "none";
 }
 

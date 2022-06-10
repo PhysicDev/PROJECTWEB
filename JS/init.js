@@ -22,14 +22,16 @@ window.onload = function(){
 }
 
 function initMSG(){
-    console.log(document.getElementById("msgArea"));
-    document.getElementById("msgArea").scrollTop = document.getElementById("msgArea").scrollHeight;
+    
+    if(document.getElementById("msgArea")){
+        document.getElementById("msgArea").scrollTop = document.getElementById("msgArea").scrollHeight;
 
-    //convert to int
-    lastMSG = parseInt(document.getElementById("msgArea").getAttribute("nbMSG"));
-    channel = document.getElementById("Rbar").getAttribute("name");
-    if(!ping){
-        ping=setInterval(askNewMSG,1000);
+        //convert to int
+        lastMSG = parseInt(document.getElementById("msgArea").getAttribute("nbMSG"));
+        channel = document.getElementById("Rbar").getAttribute("name");
+        if(!ping){
+            ping=setInterval(askNewMSG,1000);
+        }
+        document.getElementById("messageDat").onclick = resetTextArea;
     }
-    document.getElementById("messageDat").onclick = resetTextArea;
 }

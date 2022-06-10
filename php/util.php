@@ -37,6 +37,18 @@ function readUsers(){
         return $users;        
     }
 
+    function writeChannel($channels){
+        $path = "../data/channel.csv";
+        if(!file_exists($path)){
+            $path = "data/channel.csv";
+        }
+        $file = fopen($path, "w");
+        foreach($channels as $name => $channel){
+            fwrite($file, $name."|". implode("|",$channel[2])."#".$channel[1]."\n");
+        }
+        fclose($file);
+    }
+
     function readMSG($channel){
         $conv = array();
         $lines = explode("\n", file_get_contents("../data/messages/$channel.txt"));
