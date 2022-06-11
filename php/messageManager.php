@@ -1,26 +1,40 @@
 <?php
+
+//peut prendre deux requêtes differentes selon les paramètres envoyés
+//le programme va soit envoyer les nouveaux messages soit enregistrer un nouveau message
 session_start();
 
 include("util.php");
 
 if(!isset($_SESSION['user'])){
     http_response_code(403);
+    exit();
 }
 
 $user=$_SESSION['user'];
 
 if(!isset($_POST["channel"])){
     http_response_code(400);
+    exit();
 }
 
 $channel = $_POST["channel"];
 
+
+$channels = readChannel();
+if(!in_array($user,$channels[$channel][2])){
+    http_response_code(403);
+    exit();
+}
+
 if(!isset($_POST["message"]) && !isset($_POST["lastMSG"])){
     http_response_code(400);
+    exit();
 }
 
 if(!file_exists("../data/messages/$channel.txt")){
     http_response_code(404);
+    exit();
 }
 
 if(isset($_POST["message"])){

@@ -155,7 +155,6 @@ input[type=reset]:hover {
   min-height: 400px;
   height:calc(100% - 190px);
 }
-
 #addButton{
   width: 50px;
   margin:  0px;
@@ -265,7 +264,7 @@ input[type=reset]:hover {
 }
 
 #Rbar{
-  width:400px;
+  width:600px;
   min-height: 400px;
   margin-left: 30px;
 }

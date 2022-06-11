@@ -1,1 +1,3 @@
 serveur| début du canal secureCanal
+PhysicGamer|coool
+PhysicGamer|ça marche

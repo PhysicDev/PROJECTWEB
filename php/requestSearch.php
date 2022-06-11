@@ -1,5 +1,6 @@
-<!-- -->
 <?php
+
+    //montre les channels qui correspondent à la recherche
     $recherche = $_POST['search'];
 
     // si on veut filtrer en fonction de l'admin

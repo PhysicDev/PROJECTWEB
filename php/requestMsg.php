@@ -1,5 +1,6 @@
 <?php
-    //if (isset($_GET["channel"]) && $_GET["channel"] && file_exists("data/messages/" . $_GET["channel"] . ".txt") && isset($connected) && $connected) {
+    //affiche les messages d'un canal, si l'utilisateur n'est pas autorisé à le voir, affiche un message d'inscription
+
         if(!isset($channel)){
             $channel = $_POST["channelName"];
         }
