@@ -11,7 +11,7 @@
 <?php
     if(!isset($connected) || !$connected){
         echo "<li><a href='login.php'>connection</a></li>";
-        echo "<li><a href='signIn.php'>inscription/a></li>";
+        echo "<li><a href='signIn.php'>inscription</a></li>";
     }
 ?>
 <?php

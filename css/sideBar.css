@@ -103,12 +103,14 @@
   
   #Lbar{
     width:600px;
+    min-width:20vw;
     min-height: 400px;
     margin-right: 30px;
   }
   
   #Rbar{
-    width:800px;
+    width:600px;
+    min-width: 20vw;
     min-height: 400px;
     margin-left: 30px;
   }
