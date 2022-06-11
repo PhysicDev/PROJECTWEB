@@ -18,14 +18,13 @@ include("php/sessionManager.php");
         include 'channelBar.php';
     ?>
 <div id="content">
-<h2>This is the main page</h2>
+<h2>Page principale</h2>
 <p>
-This is the main page of the website.</br>
-this project is insane and will change the way you see the world !!!
+Ceci est la page principale du site</br>
+pour avoir plus d'information sur le site vous pouvez aller sur la page "About"
 <br>
 <br>
-but for now there are only empty web page with a little bit of css design ... :)
-
+le code du site est disponible sur <a href="https://github.com/PhysicDev/PROJECTWEB">github</a>
 </p>
 </div>
 

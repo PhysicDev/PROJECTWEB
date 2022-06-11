@@ -18,13 +18,25 @@ include("php/sessionManager.php");
         include 'channelBar.php';
     ?>
 <div id="content">
-<h2>what is this website ?</h2>
+<h2>c'est quoi ce site web ?</h2>
 <p>
-This is a website made for the PEIP2 web development course.
+Ceci est un site web crée pour le projet web de Peip2.
 <br>
-it has no purpose except to create a live chat with an ajax application
 <br>
-but i will maybe add a multiplayer connect4 game in the future.
+Le but de ce site est de proposer des canaux de discution pour les utilisateurs.
+Vous pouvez créer des channels après vous être connecté 
+<br>
+<br>
+Si vous ne renseignez pas de mot de passe dans votre canal, il sera public et tout le monde pourra le rejoindre.
+<br>
+Si vous placez un mot de passe dans votre canal, seul les utilisateurs qui ont le mot de passe pourront le rejoindre, voir les messages et discutter.
+<br>
+<br>
+Pour rejoindre un canal, cliquez sur le nom du canal.
+<br>
+Si vous êtes le dernier utilisateur à quitter un canal, ce dernier sera supprimé.
+<br>
+Pour gerer vos cannaux, vous pouvez aller sur votre page de profil.
 </p>
 </div>
 <?php

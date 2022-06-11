@@ -8,9 +8,11 @@ window.onload = function(){
 
     
     //on cache la div si on clique dessus
-    document.getElementById("error").onclick = function () {
-        document.getElementById("error").style.visibility = "hidden";
-        document.getElementById("error").style.display = "none";
+    if(document.getElementById("error")){
+        document.getElementById("error").onclick = function () {
+            document.getElementById("error").style.visibility = "hidden";
+            document.getElementById("error").style.display = "none";
+        }
     }
     //------------------------------------------------------------------------//
 

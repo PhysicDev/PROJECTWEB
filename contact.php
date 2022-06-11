@@ -19,10 +19,10 @@ include("php/sessionManager.php");
     ?>
 <div id="content">
 <h2>Contact</h2>
-<p> you can contact me :
+<p> vous pouvez nous contacter :
 <ul>
-<li> by email : vincent.etud@gmail.com</li>
-<li> by phone : </em>insert fake phone number here to look professional</em></li>
+<li> par mail : vincent.etud@gmail.com</li>
+<li> par mail : Mail de Maxime </li>
 </li>
 </ul>
 </p>
