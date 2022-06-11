@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Inscription</title>
-<link rel="stylesheet" type="text/css" href="css/main.css" />
-<script type="text/javascript" src="JS/login.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Inscription</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script type="text/javascript" src="JS/login.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="icon" href="images/chat.png" />
 </head>
 <body>
 <div>

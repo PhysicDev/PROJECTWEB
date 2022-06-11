@@ -5,10 +5,11 @@ include("php/sessionManager.php");
 <!DOCTYPE html>
 <html>
 <head>
-<title>About</title>
-<link rel="stylesheet" type="text/css" href="css/main.css" />
-<link rel="stylesheet" type="text/css" href="css/sideBar.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/sideBar.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="icon" href="images/chat.png" />
 </head>
 <body>
 <?php

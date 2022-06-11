@@ -7,6 +7,7 @@
     <script type="text/javascript" src="JS/signIn.js"></script>
     <script type="text/javascript" src="JS/simpleAjax.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="icon" href="images/chat.png" />
 </head>
 <body>
     <?php include 'header.php';?>

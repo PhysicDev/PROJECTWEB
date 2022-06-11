@@ -6,10 +6,11 @@ include("php/sessionManager.php");
 <!DOCTYPE html>
 <html>
 <head>
-<title>Profil</title>
-<link rel="stylesheet" type="text/css" href="css/main.css" />
-<link rel="stylesheet" type="text/css" href="css/sideBar.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Profil</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/sideBar.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="icon" href="images/chat.png" />
 </head>
 <body>
 <?php include 'header.php';?>
