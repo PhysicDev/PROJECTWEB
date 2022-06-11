@@ -48,7 +48,7 @@ function addMessage(xmlhttp){
         let message = document.getElementById("messageDat").value;
         let img="images/profil/"+response.user+".png";
         message=format(message);
-        document.getElementById("msgArea").innerHTML += "<li class='"+(lastMSG%2==1?"odd":"even")+"'><span><img src='"+img+"' class='icon'/>"+response.user+" : <span>"+message+"</span></span></li>";
+        document.getElementById("msgArea").innerHTML += "<li class='"+(lastMSG%2==1?"odd":"even")+"'><span><img src='"+img+"' class='icon'/> "+response.user+" : <span>"+message+"</span></span></li>";
         document.getElementById("messageDat").value="";
         document.getElementById("msgArea").scrollTop = document.getElementById("msgArea").scrollHeight;
     }else{

@@ -3,6 +3,7 @@
 
         if(!isset($channel)){
             $channel = $_POST["channelName"];
+            setcookie("channel", $channel, time() + 86400,"/");
         }
 
         //if not session started start it
@@ -25,13 +26,13 @@
             $msgEtPers = explode("|", $msg);
             $leMsg = $msgEtPers[1];
             $pers = $msgEtPers[0];
-            $i++;
+            $i++;$pref="";if(!file_exists("login.php")){$pref="../";}
             $img='images/profil.png';
-            if(file_exists("images/profil/$pers.png"))
+            if(file_exists($pref."images/profil/$pers.png"))
                 $img = "images/profil/$pers.png";
-            elseif(file_exists("images/profil/$pers.jpg"))
+            elseif(file_exists($pref."images/profil/$pers.jpg"))
                 $img = "images/profil/$pers.jpg";
-            elseif(file_exists("images/profil/$pers.jpeg"))
+            elseif(file_exists($pref."images/profil/$pers.jpeg"))
                 $img = "images/profil/$pers.jpeg";
             //le truc avec le $i c'est pour le style css.
             echo("<li class='".($i%2==0?"even":"odd")."'> <span><img src='$img' class='icon' /> $pers  <span>: <span> $leMsg</span></li>");
@@ -50,6 +51,4 @@
             echo('<p> veuillez entrer le mot de passe pour accéder au canal :</p>');
             echo('<div id="msgForm"><input type="password" id="msgPass" placeholder="mot de passe" /><input type="submit" id="sendPass" value="valider" onClick="addUser()"/><div id="msgErr" class="error" onClick="resetDiv()"></div></div>');
         }
-        
-        setcookie("channel", $channel, time() + 86400,"/");
 ?>
