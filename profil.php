@@ -38,7 +38,7 @@ include ("php/requestSearch.php");
                 $img='images/profil/'.$user.'.jpg';
             }
             else if(file_exists('images/profil/'.$user.'.jpeg')){
-                $img='images/profil/'.$user.'.jpg';
+                $img='images/profil/'.$user.'.jpeg';
             }
             echo "pseudo : ".$_SESSION['user']."<br>";
             echo "<a href='php/logout.php'>se deconnecter</a>";
