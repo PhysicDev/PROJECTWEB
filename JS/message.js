@@ -57,7 +57,7 @@ function addMessage(xmlhttp){
 
 function format(text){
     //check if the text contain the text "lol"
-    if(text.indexOf("lol")>-1){
+    if(text.indexOf("'''''")>-1){
         
     }
 }

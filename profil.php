@@ -26,11 +26,24 @@ include ("php/requestSearch.php");
 ?>
 </ul>
 </div>
-<div id="content">
+<script type="text/javascript" src="JS/profil.js"></script>
+<div id="content" style="text-align:center">
     <?php 
+    $img='images/profil.png';
         if(isset($connected) && $connected){
+            if(file_exists('images/profil/'.$user.'.png')){
+                $img='images/profil/'.$user.'.png';
+            }
             echo "pseudo : ".$_SESSION['user']."<br>";
             echo "<a href='php/logout.php'>se deconnecter</a>";
+            
+            echo "
+                <br>
+                  <img src=$img alt='icone de profil' id='monImg' onclick=chooseImg()>
+                  <form action='php/requestImg.php' method='post' id='profilPic' enctype='multipart/form-data'>
+                    <input id='cheminImg' type='file' name='data' style='visibility: hidden'>
+                    <input type='submit' id='boutonImg' onclick='appliquerImg()' style='visibility:hidden'>
+                  </form>";
         }
     ?>
 </div>

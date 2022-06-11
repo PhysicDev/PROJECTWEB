@@ -38,7 +38,19 @@ Pour rejoindre un canal, cliquez sur le nom du canal.
 <br>
 Si vous êtes le dernier utilisateur à quitter un canal, ce dernier sera supprimé.
 <br>
-Pour gerer vos cannaux, vous pouvez aller sur votre page de profil.
+Pour gerer vos canaux, vous pouvez aller sur votre page de profil.
+</p>
+<p style="color:#ffffff;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    un de mes vieux projet est caché sur le site.
 </p>
 </div>
 <?php

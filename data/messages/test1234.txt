@@ -41,3 +41,4 @@ superMario|bnojour
 PhysicGamer|salut
 superMario|*bonjour
 PhysicGamer|message
+PhysicGamer|test

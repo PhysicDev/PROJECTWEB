@@ -1,21 +1,17 @@
 <?php
-/*
-    $pathNewImg = $_POST['cheminImg'];
-    $chemin = explode("\\", $pathNewImg);
-    $leBonChemin="";
-    for ($i=0; $i < count($chemin)-1; $i++) {
-        $leBonChemin .= $chemin[$i]."/";
-    }
-    $leBonChemin .= $chemin[count($chemin)];
-    echo $leBonChemin;
-    */
+    $noAllow = true;
+    include("../php/sessionManager.php");
 
-    $pathNewImg = $_POST['cheminImg'];
-    $leBonChemin = "images/" . $pathNewImg;
+    print_r($_FILES);
+    $path = "../images/profil/".$user.".".(explode("/",$_FILES['data']['type'])[1]);
+    echo($path);
 
-    if ($pathNewImg==""){
-        $leBonChemin = "images/profil.png";
+    if ($_FILES["data"]["error"] == UPLOAD_ERR_OK) {
+        $tmp_name = $_FILES["data"]["tmp_name"];
+        echo($tmp_name);
+        move_uploaded_file($tmp_name, $path);
     }
 
-    echo $leBonChemin;
+    header("Location: ../profil.php");
+
 ?>

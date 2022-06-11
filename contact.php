@@ -24,7 +24,7 @@ include("php/sessionManager.php");
 <p> vous pouvez nous contacter :
 <ul>
 <li> par mail : vincent.etud@gmail.com</li>
-<li> par mail : Mail de Maxime </li>
+<li> par mail : maxime.azemard@gmail.com </li>
 </li>
 </ul>
 </p>
