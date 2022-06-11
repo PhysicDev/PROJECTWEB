@@ -7,6 +7,7 @@ include("php/sessionManager.php");
 <head>
 <title>Main Page</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/sideBar.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
 <body>

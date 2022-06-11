@@ -36,3 +36,8 @@ PhysicGamer|blabla
 PhysicGamer|<span style='color:red'> test </span>
 PhysicGamer|test
 PhysicGamer|test
+superMario|test
+superMario|bnojour
+PhysicGamer|salut
+superMario|*bonjour
+PhysicGamer|message

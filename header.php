@@ -10,14 +10,14 @@
 <li><a href="contact.php">Contact</a></li>
 <?php
     if(!isset($connected) || !$connected){
-        echo "<li><a href='login.php'>Login</a></li>";
-        echo "<li><a href='signIn.php'>Sign in</a></li>";
+        echo "<li><a href='login.php'>connection</a></li>";
+        echo "<li><a href='signIn.php'>inscription/a></li>";
     }
 ?>
 <?php
     if(isset($connected) && $connected){
         echo "<li><a href='profil.php'>$user</a></li>";
-        echo "<li><a href='php/logout.php'>Logout</a></li>";
+        echo "<li><a href='php/logout.php'>déconnexion</a></li>";
     }
 ?>
 </ul>
