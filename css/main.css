@@ -155,3 +155,34 @@ input[type=reset]:hover {
   min-height: 400px;
   height:calc(100% - 190px);
 }
+
+#header>h1:hover{
+  transform: rotate(-10deg);
+  color: #45a049;
+  font-style: italic;
+}
+
+#header>h1{
+  font-family: emoji;
+}
+
+#content{
+  background-image:url("../images/bulles.jpg");
+}
+
+#monImg{
+  width: 10%;
+  height: auto;
+}
+
+#cheminImg{
+  width: 22%;
+  height: 20%;
+  bottom: auto;
+}
+
+#boutonImg{
+  width: auto;
+  height: auto;
+  margin-left: 1cm;
+}

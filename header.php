@@ -1,6 +1,9 @@
 <!--header avec menu de navigation-->
+<script type="text/javascript" src="JS/simpleAjax.js"></script>
+<script type="text/javascript" src="JS/init.js"></script>
+
 <div id="container">
-<div id="header">
+<div id="header" onclick="puissQuatre()">
 <h1>Super projet PEIP2</h1>
 </div>
 <div id="nav">
@@ -15,8 +18,11 @@
     }
 ?>
 <?php
+    $img='images/profil.png';
     if(isset($connected) && $connected){
+
         echo "<li><a href='profil.php'>$user</a></li>";
+        echo "<li><img src=$img alt='icone de profil' id='monImg' onclick=chooseImg()>". "<input id='cheminImg' type='text' name='name' placeholder='chemin du fichier' style='visibility: hidden'>"."<input type='submit' id='boutonImg' onclick='appliquerImg()' style='visibility:hidden'></input>"."</li>";
         echo "<li><a href='php/logout.php'>déconnexion</a></li>";
     }
 ?>
