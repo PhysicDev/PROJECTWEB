@@ -9,12 +9,14 @@ PhysicGamer|ok
 PhysicGamer|test
 superMario|blablab
 PhysicGamer|test
-PhysicGamer|<i>test<i>
 PhysicGamer|tet
 PhysicGamer|test
 PhysicGamer|<i>test</i>
 maxime|coucou
 maxime|hello
-
 maxime|comment allez vous
 maxime|brrr
+hacker|je suis le hacker
+hacker|ho la la
+hacker|<b> SUDO HACK </b>
+hacker|<i>test</i>

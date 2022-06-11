@@ -42,15 +42,7 @@ Pour gerer vos canaux, vous pouvez aller sur votre page de profil.
 </p>
 <p style="color:#ffffff;">
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-    un de mes vieux projet est caché sur le site.
+    un vieux puissance4 que j'ai programmé est caché sur le site.
 </p>
 </div>
 <?php

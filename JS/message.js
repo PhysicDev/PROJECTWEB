@@ -46,8 +46,9 @@ function addMessage(xmlhttp){
     if(response.state){
         lastMSG++;
         let message = document.getElementById("messageDat").value;
-
-        document.getElementById("msgArea").innerHTML += "<li class='"+(lastMSG%2==1?"odd":"even")+"'>"+response.user+" : "+document.getElementById("messageDat").value+"</li>";
+        let img="images/profil/"+response.user+".png";
+        message=format(message);
+        document.getElementById("msgArea").innerHTML += "<li class='"+(lastMSG%2==1?"odd":"even")+"'><span><img src='"+img+"' class='icon'/>"+response.user+" : <span>"+message+"</span></span></li>";
         document.getElementById("messageDat").value="";
         document.getElementById("msgArea").scrollTop = document.getElementById("msgArea").scrollHeight;
     }else{
@@ -56,11 +57,20 @@ function addMessage(xmlhttp){
 }
 
 function format(text){
-    //check if the text contain the text "lol"
-    if(text.indexOf("'''''")>-1){
-        
+    let i=0;
+    while(text.includes("'''''")){
+        text = text.replace(/'''''/,i%2==0?"<i><b>":"</b></i>");i++;
     }
+    i=0;
+    while(text.includes("'''")){
+        text = text.replace(/'''/,i%2==0?"<b>":"</b>");i++;
+    }
+    i=0;
+    while(text.includes("''")){
+        text = text.replace(/''/,i%2==0?"<i>":"</i>");i++;
+    }return(text);
 }
+
 
 function errorOnMsg(xmlhttp){
     document.getElementById("messageDat").placeholder="un erreur est survenue, message non envoyé";

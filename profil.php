@@ -14,7 +14,6 @@ include("php/sessionManager.php");
 </head>
 <body>
 <?php include 'header.php';?>
-
 <div id="main">
 <div id="Lbar" class="bar">
     <h2>liste de vos canaux</h2>

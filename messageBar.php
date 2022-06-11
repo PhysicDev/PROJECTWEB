@@ -17,7 +17,5 @@ si le cookie n'est pas encore assigé, la div est cachée
     else {        
         echo("<div class='bar' id="."\"Rbar\""." style=\"display:none\">");
     }
-
-
 ?>
 </div>

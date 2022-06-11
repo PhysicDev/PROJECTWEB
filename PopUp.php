@@ -21,7 +21,6 @@ votre inscription a réussi, vous pouvez vous <a href="login.php">connecter</a>'
 <h2>nouveau Canal créé avec succès</h2>
 <a href="index.php">Retour à l\'accueil </a>';
 }
-
 ?>
 </div>
 </body>

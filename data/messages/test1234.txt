@@ -42,3 +42,13 @@ PhysicGamer|salut
 superMario|*bonjour
 PhysicGamer|message
 PhysicGamer|test
+PhysicGamer|test
+PhysicGamer|test
+PhysicGamer|<i>test</i>
+PhysicGamer|<i>test</i>
+PhysicGamer|<b>test</b>
+PhysicGamer|<i><b>test</i></b>
+PhysicGamer|<i>ok</i> c'est <b>cool</b> ! Le <i><b>formatage</i></b> de base <b>marche</b> ! 
+PhysicGamer|test
+PhysicGamer|test
+PhysicGamer|test
