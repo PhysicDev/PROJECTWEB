@@ -22,7 +22,7 @@ $channel = $_POST["channel"];
 
 
 $channels = readChannel();
-if(!in_array($user,$channels[$channel][2])){
+if(!in_array($user,$channels[$channel][2]) && !strcmp(trim($data[1]),"null")){
     http_response_code(403);
     exit();
 }
@@ -41,11 +41,36 @@ if(isset($_POST["message"])){
     //requête envoyer message
     $message = $_POST["message"];
     
+    if (!function_exists('str_contains')) {
+        function str_contains($haystack, $needle) {
+            return $needle !== '' && mb_strpos($haystack, $needle) !== false;
+        }
+    }
+
     //sécurité pour éviter que l'utilisateur bidouille dans le code
-    if(preg_match("/[<>\"'\/]/", $message)){
+    if(preg_match("/[<>\"\/]/", $message)){
         http_response_code(400);
         echo "{\"state\":false,\"user\":\"$user\"}";
     }else{
+
+        
+        $i=0;
+        while(str_contains($message, "'''''")){
+            //replace only first occurence
+            $message = preg_replace("/'''''/", $i%2==0?"<i><b>":"</i></b>", $message, 1);
+            $i++;
+        }
+        $i=0;
+        while(str_contains($message, "'''")){
+            $message = preg_replace("/'''/", $i%2==0?"<b>":"</b>", $message, 1);
+            $i++;
+        }
+        $i=0;
+        while(str_contains($message, "''")){
+            $message = preg_replace("/''/", $i%2==0?"<i>":"</i>", $message, 1);
+            $i++;
+        }
+
         $file = fopen("../data/messages/$channel.txt", "a");
         fwrite($file, $user."|".$message."\n");
         fclose($file);

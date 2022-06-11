@@ -7,3 +7,9 @@ PhysicGamer|Test
 superMario|salut
 PhysicGamer|ok
 PhysicGamer|test
+superMario|blablab
+PhysicGamer|test
+PhysicGamer|<i>test<i>
+PhysicGamer|tet
+PhysicGamer|test
+PhysicGamer|<i>test</i>

@@ -45,11 +45,20 @@ function addMessage(xmlhttp){
     var response = JSON.parse(xmlhttp.responseText);
     if(response.state){
         lastMSG++;
+        let message = document.getElementById("messageDat").value;
+
         document.getElementById("msgArea").innerHTML += "<li class='"+(lastMSG%2==1?"odd":"even")+"'>"+response.user+" : "+document.getElementById("messageDat").value+"</li>";
         document.getElementById("messageDat").value="";
         document.getElementById("msgArea").scrollTop = document.getElementById("msgArea").scrollHeight;
     }else{
         errorOnMsg();
+    }
+}
+
+function format(text){
+    //check if the text contain the text "lol"
+    if(text.indexOf("lol")>-1){
+        
     }
 }
 
